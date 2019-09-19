@@ -1,8 +1,8 @@
 <template>
-  <b-navbar toggleable="lg">
-    <b-navbar-brand href="#app">NavBar</b-navbar-brand>
+  <b-navbar toggleable="lg" :class="classBg">
+    <b-navbar-brand href="#app">LOGO</b-navbar-brand>
 
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-navbar-toggle target="nav-collapse" @click="toggleClass()"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
@@ -17,9 +17,26 @@ export default {
   name: "NavBar",
   props: {
     navItens: { type: Array, default: () => [] }
+  },
+  data: () => ({
+    classBg: ""
+  }),
+  methods: {
+    toggleClass() {
+      if (window.pageYOffset < 400) {
+        if (this.classBg === "") {
+          this.classBg = "bg-golden";
+        } else {
+          this.classBg = "";
+        }
+      }
+    }
   }
 };
 </script>
 
 <style>
+.bg-golden {
+  background-color: goldenrod !important;
+}
 </style>

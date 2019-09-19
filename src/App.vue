@@ -58,4 +58,7 @@ html {
     }
   }
 }
+  section {
+    margin: 2em 0em;
+  }
 </style>

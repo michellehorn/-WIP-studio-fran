@@ -77,7 +77,7 @@ export default {
   .text-box {
     position: absolute;
     padding: 0em 8em;
-    z-index: 10;
+    z-index: 2;
     top: 50%;
     .title-text {
       font-size: 80px;
@@ -105,7 +105,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
   &.lg {
     position: fixed;
     background-color: transparent;
