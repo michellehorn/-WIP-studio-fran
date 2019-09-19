@@ -9,6 +9,9 @@
           <section id="services">
             <Services />
           </section>
+          <section id="agenda">
+            <Agenda />
+          </section>
           <section id="contact">
             <Contact/>
           </section>
@@ -22,12 +25,14 @@ import Header from "./components/Header";
 import About from "./views/About";
 import Contact from "./views/Contact";
 import Services from "./views/Services";
+import Agenda from "./views/Agenda";
 export default {
   components: {
     Header,
     About,
     Contact,
-    Services
+    Services,
+    Agenda
   },
   methods: {
     getSize() {
