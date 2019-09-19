@@ -29,6 +29,7 @@ export default {
     navBarItens: [
       { name: "Contato", path: "#contact" },
       { name: "Serviços", path: "#services" },
+      { name: "Agenda", path: "#agenda" },
       ]
   }),
   methods: {
