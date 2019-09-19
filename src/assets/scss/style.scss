@@ -14,7 +14,7 @@
 }
 
 .blink {
-    animation: blink 2s infinite;
+    animation: blink 1.5s infinite;
 }
 
 @keyframes opacityOn {
@@ -44,14 +44,47 @@
 @keyframes blink {
     0% {
         opacity: 1;
-        margin-top: 30px;
     }
     50% {
         opacity: 0;
-        margin-top: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
         margin-top: 30px;
+    }
+    50% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: 30px;
+    }
+}
+
+@keyframes bgOpacityOff {
+    0% {
+        background: goldenrod;
+    }
+    50% {
+        background: rgba(218, 165, 32, 0.527);
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+@keyframes bgOpacityOn {
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: rgba(218, 165, 32, 0.527);
+    }
+    100% {
+        background: goldenrod;
     }
 }

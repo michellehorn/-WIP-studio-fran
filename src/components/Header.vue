@@ -1,33 +1,32 @@
 <template>
   <div>
-    <div class="header">
+    <div class="header-box">
       <div class="pic"></div>
       <div class="text-box">
         <h2 class="up-title-text text-font-primary text-left">Studio</h2>
         <h1 class="title-text text-font-secondary">FRAN RINALDI</h1>
         <h2 class="down-title-text text-font-primary text-right">Make & Hair</h2>
       </div>
-        <div class="w-100 h-100 down-set">
-          <span>
-            <font-awesome-icon class="blink" icon="angle-double-down"/>
-          </span>
-        </div>
+      <div class="w-100 h-100 down-set">
+        <span>
+          <font-awesome-icon class="blink slideDown" icon="angle-double-down"/>
+        </span>
+      </div>
     </div>
-    <div class="header sm-h" :class="headerSize">
-      <nav id="nav">
-        <a href="#features">Features</a>
-        <a href="#faq">FAQ</a>
-        <a href="#pricing">Pricing</a>
-      </nav>
-    </div>
+    <NavBar :navItens="navBarItens" :class="headerSize"/>
   </div>
 </template>
 
 <script>
+import NavBar from "./NavBar";
 export default {
   name: "Header",
+  components: {
+    NavBar
+  },
   data: () => ({
-    headerSize: "lg"
+    headerSize: "lg",
+    navBarItens: [{ name: "Contato", path: "#contact" }]
   }),
   methods: {
     handleScroll() {
@@ -54,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss">
-.header {
+.header-box {
   width: 100%;
   height: 100vh;
   background: linear-gradient(to right, white, #e0b955);
@@ -85,25 +84,6 @@ export default {
       font-weight: 700;
     }
   }
-  &.sm-h {
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    height: 60px;
-    top: 0;
-    left: 0;
-  }
-  &.sm {
-    background: goldenrod;
-    opacity: 1;
-    animation-duration: 1s;
-    animation-name: opacityOn;
-  }
-  &.lg {
-    opacity: 0;
-    animation-name: opacityOff;
-    animation-duration: 1s;
-  }
 }
 
 .down-set {
@@ -118,9 +98,24 @@ export default {
     }
   }
 }
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  &.lg {
+    position: fixed;
+    background-color: transparent;
+    animation: bgOpacityOff 1s;
+  }
+  &.sm {
+   position: fixed;
+    background-color: goldenrod;
+    animation: bgOpacityOn 1s;
+  }
+}
 
 @media screen and (max-width: 500px) {
-  .header {
+  .header-box {
     max-height: 400px;
     .pic {
       background-image: url("../assets/img/kosa.jpg");

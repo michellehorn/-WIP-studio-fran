@@ -5,11 +5,34 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/scss/style.scss'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faHome, faQuoteRight, faQuoteLeft, faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {
+    library
+} from '@fortawesome/fontawesome-svg-core'
+import {
+    faUserSecret,
+    faHome,
+    faQuoteRight,
+    faQuoteLeft,
+    faAngleDoubleDown,
+    faMapMarkedAlt
+} from '@fortawesome/free-solid-svg-icons'
+import {
+    FontAwesomeIcon
+} from '@fortawesome/vue-fontawesome'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
-library.add(faUserSecret, faHome, faQuoteRight, faQuoteLeft, faAngleDoubleDown)
+/* finish import area */
+
+
+
+Vue.use(VueGoogleMaps, {
+    load: {
+        key: 'AIzaSyA0_rbjaeAiLpUJK2BrUCT7VllmT9isC-A',
+        libraries: 'places',
+    },
+});
+
+library.add(faUserSecret, faHome, faQuoteRight, faQuoteLeft, faAngleDoubleDown, faMapMarkedAlt)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(BootstrapVue);

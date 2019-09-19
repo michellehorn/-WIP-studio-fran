@@ -4,10 +4,12 @@
       <Header/>
       <div class="pt-5">
         <About/>
-        <div class="container p-5">
+        <div :class="getSize() === true ? 'container p-5' : 'p-1'">
           <section id="features">feature</section>
           <section id="faq">faq</section>
-          <section id="pricing">pricing</section>
+          <section id="contact">
+            <Contact/>
+          </section>
         </div>
       </div>
     </div>
@@ -16,10 +18,17 @@
 <script>
 import Header from "./components/Header";
 import About from "./views/About";
+import Contact from "./views/Contact";
 export default {
   components: {
     Header,
-    About
+    About,
+    Contact
+  },
+  methods: {
+    getSize() {
+     return window.innerWidth > 500;
+    }
   }
 };
 </script>
@@ -48,9 +57,7 @@ html {
 .heade-app {
   height: 100vh;
 }
-.container {
   section {
     height: 300px;
   }
-}
 </style>
