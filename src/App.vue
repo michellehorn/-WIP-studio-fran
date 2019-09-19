@@ -6,7 +6,9 @@
         <About/>
         <div :class="getSize() === true ? 'container p-5' : 'p-1'">
           <section id="features">feature</section>
-          <section id="faq">faq</section>
+          <section id="services">
+            <Services />
+          </section>
           <section id="contact">
             <Contact/>
           </section>
@@ -19,11 +21,13 @@
 import Header from "./components/Header";
 import About from "./views/About";
 import Contact from "./views/Contact";
+import Services from "./views/Services";
 export default {
   components: {
     Header,
     About,
-    Contact
+    Contact,
+    Services
   },
   methods: {
     getSize() {
@@ -54,10 +58,4 @@ html {
     }
   }
 }
-.heade-app {
-  height: 100vh;
-}
-  section {
-    height: 300px;
-  }
 </style>

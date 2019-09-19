@@ -14,16 +14,21 @@ import {
     faQuoteRight,
     faQuoteLeft,
     faAngleDoubleDown,
-    faMapMarkedAlt
+    faMapMarkedAlt,
+    faChevronLeft,
+    faChevronRight
 } from '@fortawesome/free-solid-svg-icons'
 import {
     FontAwesomeIcon
 } from '@fortawesome/vue-fontawesome'
 import * as VueGoogleMaps from 'vue2-google-maps'
+import VueGlide from 'vue-glide-js'
+import 'vue-glide-js/dist/vue-glide.css'
 
 /* finish import area */
 
 
+Vue.use(VueGlide)
 
 Vue.use(VueGoogleMaps, {
     load: {
@@ -32,7 +37,7 @@ Vue.use(VueGoogleMaps, {
     },
 });
 
-library.add(faUserSecret, faHome, faQuoteRight, faQuoteLeft, faAngleDoubleDown, faMapMarkedAlt)
+library.add(faUserSecret, faHome, faQuoteRight, faQuoteLeft, faAngleDoubleDown, faMapMarkedAlt, faChevronLeft, faChevronRight)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(BootstrapVue);

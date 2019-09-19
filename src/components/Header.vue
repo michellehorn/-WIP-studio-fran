@@ -26,7 +26,10 @@ export default {
   },
   data: () => ({
     headerSize: "lg",
-    navBarItens: [{ name: "Contato", path: "#contact" }]
+    navBarItens: [
+      { name: "Contato", path: "#contact" },
+      { name: "Serviços", path: "#services" },
+      ]
   }),
   methods: {
     handleScroll() {
@@ -102,6 +105,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
   &.lg {
     position: fixed;
     background-color: transparent;

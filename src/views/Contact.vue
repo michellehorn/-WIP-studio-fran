@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-light w-100">
-        Contato
+    <div class="w-100 pt-2">
+        <h6 class="text-font-tertiary">R. Santa Luzia, 100 - Trindade, Florianópolis - SC, 88036-540</h6>
         <Map/>
     </div>
 </template>
