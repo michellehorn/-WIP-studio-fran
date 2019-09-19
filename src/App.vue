@@ -7,12 +7,12 @@
         <div :class="getSize() === true ? 'container p-5' : 'p-1'">
           <section id="features">feature</section>
           <section id="services">
-            <Services />
+            <Services/>
           </section>
           <section id="agenda">
-            <Agenda />
+            <Agenda/>
           </section>
-          <section id="contact">
+          <section id="contact" class="footer">
             <Contact/>
           </section>
         </div>
@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     getSize() {
-     return window.innerWidth > 500;
+      return window.innerWidth > 500;
     }
   }
 };
@@ -44,6 +44,7 @@ export default {
 <style lang="scss">
 html {
   scroll-behavior: smooth;
+  height: 100vh;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -63,7 +64,10 @@ html {
     }
   }
 }
-  section {
-    margin: 2em 0em;
+section {
+  margin: 2em 0em;
+  &:last-child {
+    margin: 2em 0em 0em 0em;
   }
+}
 </style>

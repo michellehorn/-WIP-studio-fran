@@ -16,7 +16,8 @@ import {
     faAngleDoubleDown,
     faMapMarkedAlt,
     faChevronLeft,
-    faChevronRight
+    faChevronRight,
+    faMapMarkerAlt
 } from '@fortawesome/free-solid-svg-icons'
 import {
     FontAwesomeIcon
@@ -37,7 +38,7 @@ Vue.use(VueGoogleMaps, {
     },
 });
 
-library.add(faUserSecret, faHome, faQuoteRight, faQuoteLeft, faAngleDoubleDown, faMapMarkedAlt, faChevronLeft, faChevronRight)
+library.add(faUserSecret, faHome, faQuoteRight, faQuoteLeft, faAngleDoubleDown, faMapMarkedAlt, faChevronLeft, faChevronRight, faMapMarkerAlt)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(BootstrapVue);
